@@ -1,0 +1,14 @@
+builders:
+  mio_web_router_annotation:
+    import: "package:mio_web_router_generator/mio_web_router_generator.dart"
+    builder_factories: [ "routerAnnotationBuilder" ]
+    build_extensions: { ".json": [ ".route.json" ] }
+    auto_apply: dependents
+    runs_before: [ "mio_web_router_generator|mio_web_router_source" ]
+    build_to: cache
+  mio_web_router_source:
+    import: "package:mio_web_router_generator/mio_web_router_generator.dart"
+    builder_factories: ["routerBuilder"]
+    build_extensions: { ".dart": [".router.dart"] }
+    auto_apply: dependents
+    build_to: source

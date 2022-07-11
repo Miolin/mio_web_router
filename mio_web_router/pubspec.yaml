@@ -1,0 +1,7 @@
+name: mio_web_router
+description: Flutter web router
+version: 0.0.1
+homepage: https://github.com/Miolin/mio_web_router
+
+environment:
+  sdk: ">=2.17.1 <3.0.0"
